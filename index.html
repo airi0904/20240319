@@ -24,45 +24,82 @@
             background-color: green;
         }
 
-        .footer{
-            position: relative;
+        .footer {
+            position: absolute;
             bottom: 0;
             width: 100%;
             background-color: pink;
         }
 
-        .footer__list{
+        .footer__list {
             display: flex;
             height: 60px;
             align-items: center;
             justify-content: center;
         }
 
-        .footer__list li{
+        .footer__list li {
             margin-right: 40px;
         }
 
-        .footer__list li:last-child{
+        .footer__list li:last-child {
             margin-right: 0;
 
+        }
+
+        .button {
+            /* width: 100%; */
+            background-color: red;
+            width: 200px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .button.bbb {
+            background-color: blue;
+        }
+
+        .button.ccc {
+            background-color: pink;
+        }
+
+        .button.ddd {
+            background-color: yellow;
         }
     </style>
 
     <div class="header">
         <div class="header__logo">YouTube</div>
-        <div class="header__login">LOGIN</div>
+        <div class="header__login jsLoginText">LOGIN</div>
+    </div>
+    <div class="contents">
+        <button class="button ccc" onClick="aaaa()">ログイン</button>
     </div>
 
     <div class="footer">
         <ul class="footer__list">
-        <li>会社名</li>
-        <li>利用規約</li>
-        <li>サイトマップ</li>
-        <li>お問い合わせ</li>
-        <li>会社情報</li>
-        <li>ビジネス</li>
+            <li>会社名</li>
+            <li>利用規約</li>
+            <li>サイトマップ</li>
+            <li>お問い合わせ</li>
+            <li>会社情報</li>
+            <li>ビジネス</li>
         </ul>
     </div>
+
+    <script>
+        function aaaa() {
+            console.log("aaaaaaa");
+            // document.querySelector(".jsLoginText").innerHTML = "AIRI"
+            const aaa = document.querySelector(".jsLoginText")
+            aaa.innerHTML = "AIRI"
+        }
+    </script>
 </body>
 
 </html>
