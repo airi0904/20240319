@@ -71,14 +71,23 @@
         .button.ddd {
             background-color: yellow;
         }
+
+        .user_list{
+            background-color: green;
+        }
     </style>
 
     <div class="header">
-        <div class="header__logo">YouTube</div>
+        <div class="header__logo jsLogo">YouTube</div>
         <div class="header__login jsLoginText">LOGIN</div>
     </div>
     <div class="contents">
         <button class="button ccc" onClick="aaaa()">ログイン</button>
+        </br>
+        <button class="button bbb" onClick="userList()">ユーザー見る</button>
+        </br>
+        <div class="userArea"></div>
+
     </div>
 
     <div class="footer">
@@ -96,10 +105,49 @@
         function aaaa() {
             console.log("aaaaaaa");
             // document.querySelector(".jsLoginText").innerHTML = "AIRI"
-            const aaa = document.querySelector(".jsLoginText")
-            aaa.innerHTML = "AIRI"
+            const aaa = document.querySelector(".jsLoginText");
+            aaa.innerHTML = "AIRI";
+
+            const bbb = document.querySelector(".jsLogo");
+            bbb.style.backgroundColor = "yellow";
         }
+
+        function userList() {
+            const narimoto = [
+                {
+                    id: 0,
+                    name: "古賀",
+                    tel: "00-0000-0000",
+                    address: "埼玉",
+                },
+                {
+                    id: 1,
+                    name: "杉山",
+                    tel: "090-0000-0000",
+                    address: "東京",
+                },
+                {
+                    id: 2,
+                    name: "相馬",
+                    tel: "080-0000-0000",
+                    address: "東京",
+                },
+            ];
+
+            const result = narimoto.map((n) => {
+                return `
+                <div class=user_list>
+                <div>${n.name}</div>
+                <div>${n.tel}</div>
+                <div>${n.address}</div>
+                <br />
+                `
+            });
+
+            document.querySelector(".userArea").innerHTML = result.join("");
+        }
+
     </script>
 </body>
 
-</html>
+</html> 
