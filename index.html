@@ -86,7 +86,8 @@
         </br>
         <button class="button bbb" onClick="userList()">ユーザー見る</button>
         </br>
-        <div class="userArea"></div>
+        <div class="userArea jsUserList"></div>
+        <button onClick="userHide()">ユーザーを隠す</button>
 
     </div>
 
@@ -102,6 +103,10 @@
     </div>
 
     <script>
+function userHide(){
+    document.querySelector(".jsUserList").style.display="none";
+}
+
         function aaaa() {
             console.log("aaaaaaa");
             // document.querySelector(".jsLoginText").innerHTML = "AIRI"
